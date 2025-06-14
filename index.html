@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Генератор рецептов</title>
+</head>
+<body style="background-image: url('https://cdn-storage-media.tass.ru/resize/976x648/tass_media/2022/03/07/V/1646627654280950_VKdoYNvN.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <header>
+        <h1>Генератор рецептов</h1>
+    </header>
+    <main>
+        <form id="recipe-generator-form">
+            <label for="ingredients-input">Список имеющихся ингредиентов:</label><br>
+            <textarea id="ingredients-input" rows="4" cols="50" placeholder="Например: картофель, морковь, курица..."></textarea><br>
+
+            <fieldset>
+                <legend>Категория рецепта:</legend>
+                <input type="radio" id="holiday-table" name="category" value="holiday-table">
+                <label for="holiday-table">Праздничный стол</label><br>
+                
+                <input type="radio" id="everyday-table" name="category" value="everyday-table">
+                <label for="everyday-table">Повседневный стол</label><br>
+                
+                <input type="radio" id="fast-cooking" name="category" value="fast-cooking">
+                <label for="fast-cooking">Быстрое приготовление</label><br>
+                
+                <input type="radio" id="meaty-dishes" name="category" value="meaty-dishes">
+                <label for="meaty-dishes">Мясные блюда</label><br>
+                
+                <input type="radio" id="vegetable-dishes" name="category" value="vegetable-dishes">
+                <label for="vegetable-dishes">Овощные блюда</label><br>
+            </fieldset>
+
+            <button type="submit">Сгенерировать рецепт</button>
+        </form>
+    </main>
+    <section id="result-section" style="display:none;">
+        <h2>Предлагаемые рецепты:</h2>
+        <div id="recipes-container"></div>
+    </section>
+    <footer>
+        <div class="copyright">
+            © Вахрушев И. Г. 2025
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
